@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'mixins';
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+
+
+

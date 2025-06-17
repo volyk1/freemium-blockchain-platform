@@ -1,0 +1,168 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.my-data {
+  padding: 2rem;
+  
+  .my-data-card {
+    @include card-shadow;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+
+    h2 {
+      color: $text-color;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .error-message {
+      background-color: rgba($error-color, 0.1);
+      color: $error-color;
+      padding: 0.75rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .success-message {
+      background-color: rgba($success-color, 0.1);
+      color: $success-color;
+      padding: 0.75rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .profile-info {
+      .info-group {
+        margin-bottom: 1.5rem;
+        
+        label {
+          font-weight: 600;
+          color: $text-color;
+          margin-right: 1rem;
+        }
+
+        span {
+          color: lighten($text-color, 20%);
+        }
+      }
+    }
+
+    .edit-form {
+      .form-group {
+        margin-bottom: 1.5rem;
+
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+          color: $text-color;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.75rem;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          transition: border-color 0.3s;
+
+          &:focus {
+            border-color: $primary-color;
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      button {
+        flex: 1;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &.edit-button {
+          background: $primary-color;
+          color: white;
+
+          &:hover {
+            background: darken($primary-color, 10%);
+          }
+        }
+
+        &.save-button {
+          background: $success-color;
+          color: white;
+
+          &:hover {
+            background: darken($success-color, 10%);
+          }
+        }
+
+        &.cancel-button {
+          background: #808080;
+          color: $text-color;
+
+          &:hover {
+            background: darken(#808080, 10%);
+          }
+        }
+
+        &.delete-button {
+          background: $error-color;
+          color: white;
+
+          &:hover {
+            background: darken($error-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.password-button {
+  background: $secondary-color;
+  color: white;
+
+  &:hover {
+    background: darken($secondary-color, 10%);
+  }
+}
+
+.password-form {
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: $text-color;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+    }
+  }
+}
+
+
+

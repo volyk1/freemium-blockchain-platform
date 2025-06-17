@@ -1,0 +1,145 @@
+.purchase-history-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    color: #2d3748;
+    margin-bottom: 2rem;
+  }
+
+  .no-transactions {
+    background: white;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #4a5568;
+  }
+
+  .transactions-list {
+    display: grid;
+    gap: 1.5rem;
+
+    .transaction-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+
+      .transaction-header {
+        padding: 1.5rem;
+        background: #f7fafc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e2e8f0;
+
+        .transaction-date {
+          color: #4a5568;
+          font-size: 0.9rem;
+        }
+
+        .transaction-total {
+          color: #3b82f6;
+          font-weight: bold;
+          font-size: 1.1rem;
+        }
+      }
+
+      .products-list {
+        padding: 1.5rem;
+
+        .product-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding: 1rem 0;
+          border-bottom: 1px solid #e2e8f0;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .product-info {
+            flex: 1;
+
+            h3 {
+              margin: 0 0 0.5rem;
+              color: #2d3748;
+            }
+
+            .version {
+              color: #4a5568;
+              margin: 0 0 0.5rem;
+              font-size: 0.9rem;
+            }
+
+            .features {
+              list-style: none;
+              padding: 0;
+              margin: 0.5rem 0;
+              color: #718096;
+              font-size: 0.9rem;
+
+              li {
+                margin-bottom: 0.25rem;
+                
+                &::before {
+                  content: "•";
+                  margin-right: 0.5rem;
+                  color: #a0aec0;
+                }
+              }
+            }
+          }
+
+          .product-price {
+            color: #3b82f6;
+            font-weight: 500;
+            min-width: 100px;
+            text-align: right;
+          }
+        }
+      }
+
+      .transaction-footer {
+        padding: 1.5rem;
+        background: #f7fafc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #e2e8f0;
+
+        .transaction-id {
+          color: #718096;
+          font-size: 0.9rem;
+        }
+
+        .transaction-status {
+          padding: 0.25rem 0.75rem;
+          border-radius: 9999px;
+          font-size: 0.875rem;
+          font-weight: 500;
+
+          &.completed {
+            background: #c6f6d5;
+            color: #22543d;
+          }
+
+          &.pending {
+            background: #fefcbf;
+            color: #744210;
+          }
+
+          &.failed {
+            background: #fed7d7;
+            color: #822727;
+          }
+        }
+      }
+    }
+  }
+}
+
+
